@@ -149,7 +149,7 @@ def demo_audio(link):
 ## demo audio list
 def demo_audio_list(demo_url):
 	print("Getting demo audio data..")
-	time.sleep(1)
+	time.sleep(0.5)
 	response = requests.get(demo_url)
 	soup 	= BeautifulSoup(response.text, features='html.parser')
 
@@ -175,7 +175,7 @@ def demo_audio_list(demo_url):
 def profile(profile_url):
 	print("We are in profile page...")	
 	response 	= requests.get(profile_url)
-	time.sleep(3)
+	time.sleep(1.5)
 	soup 		= BeautifulSoup(response.text, features='html.parser')
 	profile_info	= soup.find('div', {'class': 'profile-info'})
 	actor_name 		= profile_info.find('h1').text
